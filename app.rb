@@ -298,18 +298,35 @@ bot.command :eriones do |event, *args|
     decorator.search_item_list
   when 2
     decorator.find_item_page(with: :summary)
-  when 3
-    case args[1]
-    when "ギャザラー情報"
-      decorator.find_item_page(with: :gatherer)
-    when "入手情報"
-      decorator.find_item_page(with: :market)
-    when "モンスター情報"
-      decorator.find_item_page(with: :monster)
-    when "ショップ情報"
-      decorator.find_item_page(with: :npc_shop)
-    end
   end
+
+  decorator.render
+end
+
+bot.command :gather do |event, *args|
+  decorator = Decorator.new(event, args[0])
+  decorator.find_item_page(with: :gatherer)
+
+  decorator.render
+end
+
+bot.command :market do |event, *args|
+  decorator = Decorator.new(event, args[0])
+  decorator.find_item_page(with: :market)
+
+  decorator.render
+end
+
+bot.command :monster do |event, *args|
+  decorator = Decorator.new(event, args[0])
+  decorator.find_item_page(with: :monster)
+
+  decorator.render
+end
+
+bot.command :npc_shop do |event, *args|
+  decorator = Decorator.new(event, args[0])
+  decorator.find_item_page(with: :npc_shop)
 
   decorator.render
 end
