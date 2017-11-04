@@ -93,7 +93,7 @@ class ItemParser
       id: id,
       name: name,
       gatherers: gatherers,
-      markerts: markets,
+      markets: markets,
       monsters: monsters,
       npc_shops: npc_shops,
       recipes: recipes
@@ -137,7 +137,7 @@ class ItemParser
       next if index == 0
       row = element.xpath("td")
 
-      rows << NpcShop.new(
+      rows << Market.new(
         row[0].text,
         row[1].text,
         row[2].text,
@@ -233,7 +233,7 @@ class Decorator
       exist << "ギャザラー情報" if item.gatherers
       exist << "入手情報" if item.markets
       exist << "モンスター情報" if item.monsters
-      exist << "ショプ情報" if item.npc_shops
+      exist << "ショップ情報" if item.npc_shops
       @event << exist.join(", ")
       @event << "の情報が見つかりました。"
     when :gatherer
@@ -263,7 +263,7 @@ class Decorator
       if item.monsters.nil?
         @event << "みつかりませんでした"
       else
-        item.markets.each do |m|
+        item.monsters.each do |m|
           @event << "- モンスター名 #{m.name}, エリア: #{m.area}"
         end
       end
