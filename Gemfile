@@ -1,5 +1,5 @@
 source "https://rubygems.org"
 
-gem 'discordrb'
+gem 'ruboty-discord'
 gem 'nokogiri'
 gem 'pry'
