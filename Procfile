@@ -1,1 +1,1 @@
-bot: bundle exec ruboty
+bot: bundle exec ruboty -l eriones.rb
