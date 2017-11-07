@@ -3,8 +3,6 @@ require 'uri'
 require 'nokogiri'
 require 'net/http'
 
-require 'pry'
-
 ERIONES_URL = "https://eriones.com"
 
 module Fetcher
