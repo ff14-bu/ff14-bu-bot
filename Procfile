@@ -1,1 +1,1 @@
-web: bundle exec ruby app.rb
+bot: bundle exec ruboty

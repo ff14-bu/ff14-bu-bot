@@ -67,6 +67,7 @@ PLATFORMS
 
 DEPENDENCIES
   nokogiri
+  ruboty
   ruboty-discord
 
 BUNDLED WITH
