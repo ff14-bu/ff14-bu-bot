@@ -47,7 +47,7 @@ GEM
       dotenv
       mem
       slop
-    ruboty-discord (1.0.0.beta1)
+    ruboty-discord (1.0.0)
       discordrb (~> 3.2)
       ruboty (>= 1.0.4)
     slop (4.6.0)
