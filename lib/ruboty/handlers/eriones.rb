@@ -1,15 +1,3 @@
-require 'uri'
-require 'nokogiri'
-require 'net/http'
-
-ERIONES_URL = "https://eriones.com"
-
-require './decorator'
-require './fetcher'
-require './item_list_parser'
-require './item_parser'
-require './item'
-
 module Ruboty
   module Handlers
     class Eriones < Base
@@ -44,31 +32,23 @@ module Ruboty
       )
 
       def gather(message)
-        decorator = Decorator.new(message.match_data[1])
-        decorator.find_item_page(with: :gatherer)
-        message.reply(decorator.render)
+        Ruboty::Actions::Eriones::SearchItem.new(message, with: :gatherer).call
       end
 
       def hunt(message)
-        decorator = Decorator.new(message.match_data[1])
-        decorator.find_item_page(with: :monster)
-        message.reply(decorator.render)
+        Ruboty::Actions::Eriones::SearchItem.new(message, with: :monster).call
       end
 
       def market(message)
-        decorator = Decorator.new(message.match_data[1])
-        decorator.find_item_page(with: :market)
-        message.reply(decorator.render)
+        Ruboty::Actions::Eriones::SearchItem.new(message, with: :market).call
       end
 
       def shop(message)
-        decorator = Decorator.new(message.match_data[1])
-        decorator.find_item_page(with: :npc_shop)
-        message.reply(decorator.render)
+        Ruboty::Actions::Eriones::SearchItem.new(message, with: :npc_shop).call
       end
 
       def recipe
-        raise "No implements"
+        raise NotImplementedError, "No implements"
       end
     end
   end
