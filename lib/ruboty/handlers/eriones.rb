@@ -2,33 +2,38 @@ module Ruboty
   module Handlers
     class Eriones < Base
       on(
-        /gather (.*)/i,
+        /\A[!\/]gather\s+(.*)\z/i,
         name: "gather",
-        description: "アイテム名のギャザラー情報を探します。"
+        description: "アイテム名のギャザラー情報を探します。",
+        all: true
       )
 
       on(
-        /hunt (.*)/i,
+        /\A[!\/]hunt\s+(.*)\z/i,
         name: "hunt",
-        description: "モンスターから得られるアイテムの情報を探します。"
+        description: "モンスターから得られるアイテムの情報を探します。",
+        all: true
       )
 
       on(
-        /market (.*)/i,
+        /\A[!\/]market\s+(.*)\z/i,
         name: "market",
-        description: "アイテムの入手情報を探します。"
+        description: "アイテムの入手情報を探します。",
+        all: true
       )
 
       on(
-        /shop (.*)/i,
+        /\A[!\/]shop\s+(.*)\z/i,
         name: "shop",
-        description: "アイテムのショップ情報を探します。"
+        description: "アイテムのショップ情報を探します。",
+        all: true
       )
 
       on(
-        /recipe (.*)/i,
+        /\A[!\/]recipe\s(.*)\z/i,
         name: "recipe",
-        description: "アイテムのレシピを探します"
+        description: "アイテムのレシピを探します",
+        all: true
       )
 
       def gather(message)
