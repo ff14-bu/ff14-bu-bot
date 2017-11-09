@@ -1,0 +1,16 @@
+{
+  "name": "ff14-bu-bot",
+  "description": "bot",
+  "repository": "https://github.com/ff14-bu/ff14-bu-bot.git",
+  "env": {
+    "RUBOTY_ENV": {
+      "description": "Ruboty's environment (production or development).",
+      "value": "production",
+      "required": false
+    },
+    "DISCORD_TOKEN": {
+      "description": "Bot user's token.",
+      "required": true
+    }
+  }
+}
