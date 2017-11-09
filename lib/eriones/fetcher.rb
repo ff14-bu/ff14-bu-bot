@@ -30,10 +30,10 @@ module Eriones
 
       items = Parsers::ItemListParser.new(res.body).items
 
-      raise FetcheError, "2件以上見つかったよ" if items.count != 1
+      item = items.find { |item| item.name == search_word }
 
-      item = items.first
-
+      raise FetcheError, "2件以上見つかったよ" if item.nil? && items.count != 1
+      
       uri = URI.parse("#{ERIONES_BASE_URL}/#{item.id}")
       request = Net::HTTP::Get.new(uri)
       req_options = {
