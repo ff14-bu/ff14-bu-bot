@@ -1,1 +1,1 @@
-bot: bundle exec ruboty -l lib/ruboty/eriones.rb
+bot: bundle exec ruboty -l lib/ff14_bu_bot.rb
