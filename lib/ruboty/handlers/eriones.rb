@@ -1,5 +1,3 @@
-require "ruboty/actions/eorzea_time"
-
 module Ruboty
   module Handlers
     class Eriones < Base
@@ -38,12 +36,6 @@ module Ruboty
         all: true
       )
 
-      on(
-        /(:?(:?今|いま)(:?[、,]\s*)?)?(:?何時|なんじ)(:?で(:?しょう?|す)か?)?[\?？]*\z/,
-        name: "eorzea_time",
-        description: ""
-      )
-
       def gather(message)
         Ruboty::Actions::Eriones::SearchItem.new(message, with: :gatherer).call
       end
@@ -62,10 +54,6 @@ module Ruboty
 
       def recipe
         raise NotImplementedError, "No implements"
-      end
-
-      def eorzea_time(message)
-        Ruboty::Actions::EorzeaTime.new(message).call
       end
     end
   end
