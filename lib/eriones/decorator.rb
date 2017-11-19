@@ -87,7 +87,7 @@ module Eriones
 
       lines << "#{item.name}のショップ情報は"
 
-      if item.monsters.nil?
+      if item.npc_shops.nil?
         lines << "みつかりませんでした"
       else
         item.npc_shops.each do |m|
