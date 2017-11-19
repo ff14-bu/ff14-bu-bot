@@ -95,7 +95,7 @@ module Eriones
       end
 
       def npc_shops
-        xpath = '//*[@id="box-fix"]//table/tr/th[contains(text(), "NPC名")]/parent::*/parent::*/tr'
+        xpath = '//*[@id="box-fix"]//table//tr/th[contains(text(), "NPC名")]/parent::*/parent::*/tr'
         result = doc.xpath(xpath)
         return nil if result.empty?
 
