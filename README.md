@@ -2,6 +2,14 @@
 
 ff14-bu-bot は [FINAL FANTASY XIV (FF14)](https://jp.finalfantasyxiv.com) のゲーム内情報の検索などを行う [Discord](https://discordapp.com/) 用のチャットボットです。
 
+## Table of Contents
+
+- [コマンドリスト](#コマンドリスト)
+- [動かし方](#動かし方)
+- [デプロイ](#デプロイ)
+- [ライセンス](#ライセンス)
+- [謝辞](#謝辞)
+
 ## コマンドリスト
 
 | command                | description                                      | example                        |
