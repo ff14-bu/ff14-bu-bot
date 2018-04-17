@@ -1,3 +1,5 @@
+require 'eorzea_time'
+
 module Ruboty
   module Actions
     class EorzeaTime < Base
@@ -8,8 +10,8 @@ module Ruboty
       private
 
       def time
-        now = Time.at(Time.now.utc.to_i * 1440 / 70).utc
-        "ET #{"%02d" % now.hour}時#{"%02d" % now.min}分です"
+        t = ::EorzeaTime.now
+        "ET #{t.to_s}"
       end
     end
   end

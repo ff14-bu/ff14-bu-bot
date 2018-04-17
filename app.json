@@ -11,6 +11,11 @@
     "DISCORD_TOKEN": {
       "description": "Bot user's token.",
       "required": true
+    },
+    "TZ": {
+      "description": "Time zone",
+      "value": "Asia/Tokyo",
+      "required": true
     }
   }
 }
