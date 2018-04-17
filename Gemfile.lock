@@ -19,6 +19,8 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.1)
     eorzea_time (0.2.0)
+    eorzea_weather (0.1.1)
+      eorzea_time (>= 0.2.0)
     event_emitter (0.2.6)
     ffi (1.9.18)
     http-cookie (1.0.3)
@@ -68,6 +70,7 @@ PLATFORMS
 
 DEPENDENCIES
   eorzea_time
+  eorzea_weather (>= 0.1.1)
   nokogiri
   ruboty
   ruboty-discord
