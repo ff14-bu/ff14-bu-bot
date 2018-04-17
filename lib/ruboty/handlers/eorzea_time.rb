@@ -1,8 +1,8 @@
 module Ruboty
   module Handlers
-    class Eriones < Base
+    class EorzeaTime < Base
       on(
-        /(:?(:?今|いま)(:?[、,]\s*)?)?(:?何時|なんじ)(:?で(:?しょう?|す)か?)?[\?？]*\z/,
+        /et|eorzean?\s+time|(:?(:?今|いま)(:?[、,]\s*)?)?(:?何時|なんじ)(:?で(:?しょう?|す)か?)?[\?？]*\z/i,
         name: "eorzea_time",
         description: ""
       )

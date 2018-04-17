@@ -18,6 +18,7 @@ GEM
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.1)
+    eorzea_time (0.2.0)
     event_emitter (0.2.6)
     ffi (1.9.18)
     http-cookie (1.0.3)
@@ -66,9 +67,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  eorzea_time
   nokogiri
   ruboty
   ruboty-discord
 
 BUNDLED WITH
-   1.16.0.pre.2
+   1.16.1
