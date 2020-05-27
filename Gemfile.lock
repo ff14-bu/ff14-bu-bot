@@ -23,7 +23,7 @@ GEM
     eorzea_weather (0.1.1)
       eorzea_time (>= 0.2.0)
     event_emitter (0.2.6)
-    ffi (1.9.18)
+    ffi (1.12.2)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (1.8.2)
